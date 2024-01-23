@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fenix&family=Open+Sans:wght@400;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">    
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="header-text">
+                <h1>Felipe Manhães</h1>
+                <p>Web Developer</p>
+            </div>   
+            <div class="image-wrapper">
+                <img id="user-image" src="./assets/user.jfif" alt="imagem de usuario generico em preto e branco usando oculos">
+            </div>    
+             
+
+        </header>
+
+
+        <div class="info-box">
+            <section>
+                <h1>Sobre Mim</h1>
+                <p>Nasci e cresci no Rio de Janeiro, e foi lá no IFF Fluminense que me formei em Engenharia de Controle e Automação. Durante minha formação, descobri uma paixão pela programação web que me levou a mergulhar em HTML, CSS e design patterns. Uma viagem a Florianópolis, SC, me encantou tanto que decidi fazer dessa cidade meu novo lar.
+                </p>
+                <p>   Tenho uma base sólida em engenharia e uma paixão pelo desenvolvimento web. Gosto de criar animações responsivas usando CSS. Por exemplo, posso fazer um texto desvanecer e reaparecer em um loop infinito ou criar um botão que muda de cor quando o cursor passa sobre ele. Meu conhecimento em HTML é bastante útil, permitindo-me estruturar páginas web de maneira eficiente e acessível.
+                </p>
+                <p>   Se você está procurando colaborar em um projeto web, ficarei feliz em ajudar. Tenho certeza de que podemos criar algo incrível juntos. Entre em contato e vamos conversar sobre como posso contribuir para o seu projeto. Estou ansioso para trabalharmos juntos.
+                </p>
+            </section>
+
+            <article>
+                <h1>Projetos Recentes</h1>
+                <p>Aqui estão alguns dos meus projetos mais recentes:</p>
+                <ul>
+                    <li class="project">
+                        <figure>
+                            <img src="./assets/proj1.jfif" alt="">
+                            <h2>U Camping</h2>
+                            
+                            <figcaption>
+                             <i>     "Site de aluguel de camping,
+                                simplificando a busca e reserva de equipamentos para aventuras ao ar livre.
+                           
+                                Explore facilmente as opções e desfrute de 
+                                    uma experiência de camping 
+                             </i>        personalizada com praticidade."
+                                </figcaption>
+                          
+                        </figure>
+                    </li>
+                    <li class="project">
+                        <figure>
+                            <img src="./assets/proj2.jfif" alt="">
+                            <h2>O Farol</h2>
+                            <figcaption>                                
+                                <i>     "Site de armazenamento de dados com 
+                                tema escuro e inspiração náutica. Oferecendo segurança 
+                                e estilo, é a solução elegante para preservar 
+                                </figcaption>i>     seus dados online."
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="project">
+                        <figure>
+                            <img src="./assets/proj3.jfif" alt="">
+                            <h2>Gadget Merchant</h2>
+                            <figcaption>                               
+                              <i>  "Site criado para compra e troca de eletrônicos usados. 
+                                Explore, negocie e dê uma nova vida aos seus dispositivos com facilidade."
+                              </i>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </article>
+        </div>
+        <footer>
+            <p>&copy; 2024 Meu Portfólio</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Seleciona todos os elementos com a classe 'project'
+        let projects = document.querySelectorAll('.project');
+
+        // Adiciona um evento de clique a cada projeto
+        projects.forEach(function (project) {
+            project.addEventListener('click', function () {
+                // Obtém o título do projeto dentro do projeto clicado
+                let projectName = project.querySelector('h2').innerText;
+
+                // Exibe um alerta com o título do projeto
+                alert('Título do Projeto: ' + projectName);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
