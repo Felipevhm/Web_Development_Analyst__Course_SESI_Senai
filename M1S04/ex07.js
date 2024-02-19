@@ -1,15 +1,14 @@
-let h ='empty';
- h = prompt('Digite o valor da hora inteira (somente números)');
-
-
+let fullDate = new Date();
+let h        = fullDate.getHours();
 let message;
 
-//  05 <   dia    <= 12 
-//  12 <   tarde  <= 18
-//  18 <   noite  <=  5 
+// //  05 <   dia    <= 12
+// //  12 <   tarde  <= 18
+// //  18 <   noite  <=  5 
+
 
 if (h == null){
-message ='Valor não recebido. Recarrege a página e digite o valor da hora inteira.';
+message ='Valor não recebido. Recarrege a página.';
 
 console.log(message)
 window.alert(message)
