@@ -27,6 +27,7 @@ header{
 
 
   color: #fff;
+  font-size: 22rem;
 
   background-color: #080808;
   opacity: 0.8;
@@ -42,10 +43,6 @@ main{
   background-color: #682e2e55;
 
   overflow-y: scroll;
-}
-
-section{
- 
 }
 
 .description-wrapper{
@@ -67,4 +64,15 @@ footer{
 
   background-color: rgb(31, 69, 38);
   min-height: 50px;
+}
+
+img{
+  height: 300rem;
+  width: 300rem;
+
+  border-radius: 50%;
+  margin-left: 100rem;
+
+  border: #682e2e;
+
 }
