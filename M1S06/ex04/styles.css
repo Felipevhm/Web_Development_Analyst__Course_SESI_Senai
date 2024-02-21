@@ -19,17 +19,17 @@ body{
 }
 
 header{
+  font-family: "Protest Revolution", sans-serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
   
-  font-family: "Protest Revolution", sans-serif;
-
   min-height: 35rem;
 
 
   color: #fff;
-  font-size: 22rem;
+  font-size: 28rem;
 
   background-color: #080808;
   opacity: 0.8;
@@ -46,8 +46,8 @@ main{
 
   overflow-y: scroll;
 
+  border: #202020 3px solid;
 }
-
 
 .description-wrapper{
   display: flex;
@@ -60,6 +60,8 @@ main{
 }
 
 footer{
+  font-style: italic;
+
   display: flex;
   justify-content: center;
   align-items: center;
