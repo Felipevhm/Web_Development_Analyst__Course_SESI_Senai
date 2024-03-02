@@ -1,0 +1,132 @@
+*{
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+
+  font-size: 16rem;
+
+  font-family: "Raleway", sans-serif;
+}
+
+:root{
+  font-size: 6.25%;
+}
+
+body{
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 1fr 5fr 1fr;
+}
+
+header{
+  /* font-family: "Protest Revolution", sans-serif;
+  font-size: 28rem;
+  color: #fff; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  min-height: 35rem;
+
+  background-color: #080808;
+  opacity: 0.8;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #080808 10px ), repeating-linear-gradient( #682e2e55, #682e2e );
+
+  
+
+}
+
+header p{
+  animation: appear 1s forwards ease-in-out;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 28rem;
+  color: #fff;
+  
+  animation: color-change 2s forwards ease-out;
+}
+main{
+  display: flex;
+
+
+  padding: 20rem;
+  background-color: #c7c7c7;
+
+  overflow-y: scroll;
+
+  border: #202020 3px solid;
+}
+
+.description-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  margin: 5rem 0;
+}
+
+.img-wrapper{
+  width: 50vw;
+}
+
+img{
+  height: 300rem;
+  width: 300rem;
+
+  border-radius: 50%;
+  margin-left: 100rem;
+
+  border: #160606;
+
+  animation: appear 1.5s  forwards ease-in-out ;
+
+}
+
+
+
+footer{
+  font-style: italic;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+
+  background-color: #291313290795;
+  min-height: 50px;
+}
+
+
+
+@keyframes appear{
+  0%{
+   transform: scale(0.7) ;
+   opacity: 0;
+  }
+  50%{
+transform: scale(1.05);
+opacity: 0.15;
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes color-change{
+  0%{
+     color: #000;
+     opacity: 0;
+  }
+
+  50%{
+    color: #000;
+    opacity: 1;
+ }
+
+  100%{
+    filter: #fff;
+    opacity: 1;
+  }
+}
