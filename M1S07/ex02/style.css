@@ -1,0 +1,32 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  background-color: #ff6347; /* tomate */
+  grid-area: 1 / 1 / 13 / 4; 
+}
+
+.sidebar {
+  background-color: #add8e6; /* azul claro */
+  grid-area: 1 / 4 / 3 / 13;
+}
+
+.content {
+  background-color: #90ee90; /* verde claro */
+  grid-area: 3 / 4 / 13 / 13;
+}
