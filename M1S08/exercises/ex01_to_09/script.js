@@ -45,4 +45,11 @@ titulo.textContent += " Changed size on ex06"
 
 titulo.classList.remove("bkg-gray");
 
+//ex08
+
+inputElement = document.querySelector("input")
+
+inputElement.setAttribute("placeholder", "ex08 new placeholder ") 
+
+
 
