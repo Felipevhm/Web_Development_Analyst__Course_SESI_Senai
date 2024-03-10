@@ -22,5 +22,11 @@ ex03Button.style.cssText ="width: 200px; height: 50px"
 
 mainElement.appendChild(ex03Button)
 
+//ex04
+
+pElement = document.querySelector('p')
+
+mainElement.removeChild(pElement)
+
 
 
