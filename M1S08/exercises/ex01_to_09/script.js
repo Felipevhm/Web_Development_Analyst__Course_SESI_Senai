@@ -28,5 +28,11 @@ pElement = document.querySelector('p')
 
 mainElement.removeChild(pElement)
 
+//ex05
+
+Array.from(changeLiClass).forEach(element => {
+  element.style.backgroundColor = "#d082bc"
+});
+
 
 
