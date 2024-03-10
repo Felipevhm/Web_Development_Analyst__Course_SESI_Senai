@@ -34,5 +34,11 @@ Array.from(changeLiClass).forEach(element => {
   element.style.backgroundColor = "#d082bc"
 });
 
+//ex06
+
+let titulo = document.querySelector("h1")
+
+titulo.classList = "font-size-48"
+titulo.textContent += " Changed size on ex06"
 
 
