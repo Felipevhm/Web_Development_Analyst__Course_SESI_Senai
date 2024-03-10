@@ -48,8 +48,11 @@ titulo.classList.remove("bkg-gray");
 //ex08
 
 inputElement = document.querySelector("input")
+inputElement.setAttribute("placeholder", "ex08 new placeholder ")
 
-inputElement.setAttribute("placeholder", "ex08 new placeholder ") 
+//ex09
+headerElement = document.querySelector("header")
+headerElement.removeAttribute("title")
 
 
 
