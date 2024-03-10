@@ -58,4 +58,9 @@ footer{
 
 .font-size-48{
 font-size: 48px;
+
+}
+
+.bkg-gray{
+  background-color: gray;
 }

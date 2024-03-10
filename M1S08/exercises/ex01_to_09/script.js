@@ -38,7 +38,11 @@ Array.from(changeLiClass).forEach(element => {
 
 let titulo = document.querySelector("h1")
 
-titulo.classList = "font-size-48"
+titulo.classList += " font-size-48"
 titulo.textContent += " Changed size on ex06"
+
+//ex07
+
+titulo.classList.remove("bkg-gray");
 
 
