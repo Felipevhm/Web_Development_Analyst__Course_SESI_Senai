@@ -2,7 +2,7 @@ let myNodelist = document.getElementsByTagName("LI");
 let i;
 for (i = 0; i < myNodelist.length; i++) {
   let span = document.createElement("SPAN");
-  let txt = document.createTextNode("X");
+  let txt = document.createTextNode(" X");
   span.className = "close";
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
@@ -29,7 +29,7 @@ function newElement() {
   document.getElementById("myInput").value = "";
 
   let span = document.createElement("SPAN");
-  let txt = document.createTextNode("\u00D7");
+  let txt = document.createTextNode(" X");
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
