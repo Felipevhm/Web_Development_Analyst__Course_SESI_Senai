@@ -51,7 +51,7 @@ body::after {
   gap: 20px;
 }
 
-.container > button, .container > input{
+.container > button {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -94,4 +94,5 @@ label{
 
 #check-cart{
   background-color: #af984c;
+  width: 177px;
 }
