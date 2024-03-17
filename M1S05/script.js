@@ -5,7 +5,11 @@ let products =
 {code: 3, name:'juice', price: 1.5 }
 ]
 
-boughtProducts = []
+boughtProducts = JSON.parse(localStorage.getItem('userItems'))
+if (boughtProducts === null){
+  boughtProducts = []
+}
+console.log(boughtProducts)
 
 
 let outputLabel = document.querySelector('label');
@@ -37,6 +41,10 @@ if (foundElement) {
     }
   )
   alert(`Product purchased!\n\n ${tempArray}`);
+
+  localStorage.setItem('userItems',JSON.stringify(boughtProducts))
+
+
   }
   else{
     alert(`Product Not Found.\n\n`)
@@ -78,3 +86,4 @@ function calculateTotal(boughtProducts) {
   return total
 
 }
+
