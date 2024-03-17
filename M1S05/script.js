@@ -5,25 +5,39 @@ let products =
 {code: 3, name:'juice', price: 1.5 }
 ]
 
-let outputLabel = document.querySelector('label');
+boughtProducts = []
 
-function checkPrice() {
+let outputLabel = document.querySelector('label');
 let input = document.getElementById('input-product')
 
-let foundElement = products.find(product => product.code === Number(input.value) || product.name === input.value);
-// console.log ("foundElement é: " + foundElement)
-if(foundElement){
-    
-    outputLabel.textContent =`Code #${foundElement.code} | ${foundElement.name}: $` + foundElement.price
-    console.log (outputLabel.textContent)  
+function checkPrice() {
+  let foundElement = products.find(product => product.code === Number(input.value) || product.name === input.value);
+  // console.log ("foundElement é: " + foundElement)
+  if(foundElement){
+      outputLabel.textContent =`Code #${foundElement.code} | ${foundElement.name}: $` + foundElement.price
+      console.log (outputLabel.textContent)  
+    }
+
+  else{
+    outputLabel.textContent ="NOT FOUND"
+    console.log ("Product not found.")
   }
-else{
-  outputLabel.textContent ="NOT FOUND"
-  console.log ("Product not found.")
-}
 }
 
 function buyProduct() {
-  // Add your code here to buy the product
-  alert('Product purchased!');
+let foundElement = products.find(product => product.code === Number(input.value) || product.name === input.value);
+let tempArray = []
+
+if (foundElement) {
+  boughtProducts.push(foundElement)
+  boughtProducts.forEach(object => {
+    tempArray.push(`{${object.name}, \$${object.price}}`)
+    
+  });
+    
+  alert(`Product purchased!\n\n ${tempArray}`);
+  }
+  else{
+    alert(`Product Not Found.\n\n`)
+  }
 }
