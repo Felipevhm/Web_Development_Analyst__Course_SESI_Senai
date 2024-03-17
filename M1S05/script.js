@@ -5,10 +5,13 @@ let products =
 {code: 3, name:'juice', price: 1.5 }
 ]
 
+// Start
 boughtProducts = JSON.parse(localStorage.getItem('userItems'))
 if (boughtProducts === null){
   boughtProducts = []
 }
+totalTextUpdate (boughtProducts)
+itemsCountUpdate (boughtProducts)
 console.log(boughtProducts)
 
 
@@ -49,18 +52,9 @@ if (foundElement) {
   else{
     alert(`Product Not Found.\n\n`)
   }
-  //ex 05
-let totalText = document.querySelector('p')
-totalText.textContent ="Total: \$" + String(calculateTotal(boughtProducts))
 
-// ex06
-let itemsCount = document.querySelector('#items-count')
-let objectsCount = 0
-boughtProducts.forEach(object =>{
-    objectsCount += 1
-})
-itemsCount.textContent = "Items: " + objectsCount
-
+  totalTextUpdate (boughtProducts)
+  itemsCountUpdate (boughtProducts)
 }
 
 function checkCart() {
@@ -86,4 +80,21 @@ function calculateTotal(boughtProducts) {
   return total
 
 }
+
+function totalTextUpdate (boughtProducts){
+    let totalText = document.querySelector('p')
+    totalText.textContent ="Total: \$" + String(calculateTotal(boughtProducts))
+  }
+
+  function itemsCountUpdate (boughtProducts){
+  let itemsCount = document.querySelector('#items-count')
+  let objectsCount = 0
+  boughtProducts.forEach(object =>{
+      objectsCount += 1
+  })
+  itemsCount.textContent = "Items: " + objectsCount
+
+  }
+
+
 
