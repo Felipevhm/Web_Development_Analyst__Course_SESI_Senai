@@ -6,7 +6,7 @@ let products =
 ]
 
 boughtProducts = []
-let total = 0
+
 
 let outputLabel = document.querySelector('label');
 let input = document.getElementById('input-product')
@@ -44,6 +44,7 @@ if (foundElement) {
 }
 
 function checkCart() {
+  let total = 0
   boughtProducts.forEach(object =>{
     total += object.price
   })
@@ -57,3 +58,7 @@ function checkCart() {
   }
 
 }
+
+// function calculateTotal(boughtProducts) {
+  
+// }
