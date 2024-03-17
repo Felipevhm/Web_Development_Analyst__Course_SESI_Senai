@@ -98,3 +98,10 @@ label{
   background-color: #af984c;
   width: 177px;
 }
+
+p{
+  margin-top: 20px;
+  font-size: 52px;
+  font-weight: bold;
+  color: #606060;
+}
