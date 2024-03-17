@@ -41,10 +41,18 @@ if (foundElement) {
   else{
     alert(`Product Not Found.\n\n`)
   }
+  //ex 05
 let totalText = document.querySelector('p')
 totalText.textContent ="Total: \$" + String(calculateTotal(boughtProducts))
-// console.log(b)
-//  = b
+
+// ex06
+let itemsCount = document.querySelector('#items-count')
+let objectsCount = 0
+boughtProducts.forEach(object =>{
+    objectsCount += 1
+})
+itemsCount.textContent = "Items: " + objectsCount
+
 }
 
 function checkCart() {
