@@ -79,10 +79,15 @@ body::after {
   cursor: pointer;
 }
 
-#product{
+#input-product{
   height: 48.667px;
   width: 288px;
   font-size: 22px;
 
   padding: 10px;
+}
+
+label{
+  font-size: 24px;
+  font-weight: bold;
 }
