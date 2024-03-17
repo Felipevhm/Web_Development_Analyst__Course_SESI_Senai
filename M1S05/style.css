@@ -85,6 +85,8 @@ body::after {
   font-size: 22px;
 
   padding: 10px;
+
+  text-align: center;
 }
 
 label{

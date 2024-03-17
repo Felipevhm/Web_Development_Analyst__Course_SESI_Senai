@@ -44,10 +44,8 @@ if (foundElement) {
 }
 
 function checkCart() {
-  let total = 0
-  boughtProducts.forEach(object =>{
-    total += object.price
-  })
+
+  let total = calculateTotal(boughtProducts)
 
 
   if (total === 0){
@@ -59,6 +57,12 @@ function checkCart() {
 
 }
 
-// function calculateTotal(boughtProducts) {
-  
-// }
+function calculateTotal(boughtProducts) {
+  let total = 0
+  boughtProducts.forEach(object =>{
+    total += object.price
+  })
+
+  return total
+
+}
