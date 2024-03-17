@@ -6,6 +6,7 @@ let products =
 ]
 
 boughtProducts = []
+let total = 0
 
 let outputLabel = document.querySelector('label');
 let input = document.getElementById('input-product')
@@ -30,14 +31,29 @@ let tempArray = []
 
 if (foundElement) {
   boughtProducts.push(foundElement)
-  boughtProducts.forEach(object => {
+  boughtProducts.forEach(object => 
+    {
     tempArray.push(`{${object.name}, \$${object.price}}`)
-    
-  });
-    
+    }
+  )
   alert(`Product purchased!\n\n ${tempArray}`);
   }
   else{
     alert(`Product Not Found.\n\n`)
   }
+}
+
+function checkCart() {
+  boughtProducts.forEach(object =>{
+    total += object.price
+  })
+
+
+  if (total === 0){
+    alert(`The cart is empty`)
+  }
+  else{
+    alert(`The total is \$${total}`)
+  }
+
 }
