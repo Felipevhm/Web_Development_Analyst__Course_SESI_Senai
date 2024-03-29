@@ -1,4 +1,5 @@
 import CardTrilha from "./components/CardTrilha"
+import * as PropTypes from "prop-types"
 
 function App() {
 const listaTrilhas = [ {
