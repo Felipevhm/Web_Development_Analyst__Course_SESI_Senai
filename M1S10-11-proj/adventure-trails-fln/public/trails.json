@@ -1,0 +1,32 @@
+[
+    {
+        "nome_da_trilha": "Trilha da Costa da Lagoa",
+        "cidade_e_estado": "Florianópolis, SC",
+        "duração": "7 km",
+        "trajeto": "Caminhada com trechos leves e moderados, com pedras e subidas de morros",
+        "dificuldade": "Moderada",
+        "tipo_de_trilha": "Caminhada",
+        "nome_do_criador_da_trilha": "Amanda Rodrigues",
+        "URL_com_a_imagem_da_trilha": "https://www.viajali.com.br/wp-content/uploads/2020/03/trilhas-florianopolis-1.jpg"
+    },
+    {
+        "nome_da_trilha": "Caminho do Morro do Lampião",
+        "cidade_e_estado": "Florianópolis, SC",
+        "duração": "30 minutos",
+        "trajeto": "Subida leve, ótima para iniciantes e grupos de famílias",
+        "dificuldade": "Leve",
+        "tipo_de_trilha": "Caminhada",
+        "nome_do_criador_da_trilha": "Cassia Moraes",
+        "URL_com_a_imagem_da_trilha": "https://tudosobretrilhas.com.br/wp-content/uploads/2019/06/morro-do-lampiao-800x445.jpg"
+    },
+    {
+        "nome_da_trilha": "Trilha da Lagoinha do Leste",
+        "cidade_e_estado": "Florianópolis, SC",
+        "duração": "2 horas",
+        "trajeto": "Caminhada com trechos de subida",
+        "dificuldade": "Moderada",
+        "tipo_de_trilha": "Caminhada",
+        "nome_do_criador_da_trilha": "Miriam Rosa",
+        "URL_com_a_imagem_da_trilha": "https://i0.wp.com/alizswonderland.com/wp-content/uploads/2022/02/Topo-do-Morro-da-Coroa-viewpoint-2_Things-to-know-Lagoinha-do-Leste-Florianopolis-Brazil-AlizsWonderland.jpg?w=1000&ssl=1"
+    }
+]
