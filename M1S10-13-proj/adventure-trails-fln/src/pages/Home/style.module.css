@@ -1,0 +1,139 @@
+.container{
+    font-family: "Inter", sans-serif;
+
+   /* background-color: #5A4F39; */
+   height: 300vh; 
+
+
+   display:flex; 
+   flex-direction:column; 
+    align-items:center;  
+   margin: 0 auto 0;
+
+   background-color: #5A4F39;
+   z-index: 2;
+
+}
+
+.container *{
+ max-width: 1440px;
+}
+
+p,h1 {font-weight: 400;}
+h2{font-weight: 600;}
+button{font-weight: 700;}
+
+.background {
+   position: absolute;
+
+   height: 1024px;
+   max-width: 1440px;
+
+   top: 70px;
+   right: 0;
+   bottom: 0;
+   left: 0;
+
+   background: url('https://s3-alpha-sig.figma.com/img/d499/89ee/a6d23a7a9ffd6d136e430c855a72ebc0?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aNCm8Il7udCywQ3z3GwSwkSOXMpYVXyInNfBnh5qT-NQ-nY2VgJnOALnsFzAd9uFW4hgc-b5YLbsf1ffI5-NC2amZdwGcCeUpn-xLvdlY5K4AEDxjH45Tx1B~n0s0GW3PMo9-QFhvEgXqeazAo3gXDxUGXu9~GBLHWypGzvKz2D-bzyvjVTi8sOP6-Ip9Qo3~xsgV5AKYQ~EV9BJ~ZgRYrh~pAMggLyTGAmgdvlknJih80NKqpBrfE10ruSfZ~dFuXtCFtkl1qPkDLkGb3qLFZYT7FFJO9uEa9tTB4T3YBeG6y3laL6zx7MiedtT~LV6unSoeklRBQvxqUfSG8vAjg__') no-repeat;
+   background-size: cover;
+   z-index: 1;
+
+   margin: 0 auto;
+
+ }
+ 
+ .background::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.5); /* adjust color and opacity as needed */
+ }
+ 
+ .content {
+   height: 950px;
+   width: 100%;
+
+   font-size: 40px;
+   line-height: 45px;
+   text-align: center;
+   gap: 30px;
+
+   color: #fff;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   z-index: 2;
+   
+
+ }
+ .content button{
+   margin-top: 30px;
+ }
+
+ h2{
+   margin: 220px 170px 0;
+   line-height: 55px;
+ }
+ 
+ .pWrapper{
+   padding: 0 270px;
+
+ }
+ p{
+   font-size: 20px;
+   line-height: 24px;
+   
+ }
+
+ .description{
+  color: #fff;
+   background-color: #5A4F39;
+
+   margin: 300px 0 100px;
+   padding: 40px 50px 0;
+
+   display: flex;
+   flex-direction: column;
+
+   align-items: center;
+   gap: 30px;
+
+   z-index: 2;
+ }
+ .pWrapperSecond{
+  padding: 0 -10px;
+
+}
+
+ .subText{
+  color: #fff;
+   background-color: #5A4F39;
+   
+   
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   padding: 50px 50px;
+   
+   
+   z-index: 2;
+
+ }
+
+ .subText>*{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+ }
+
+ .subText>*>Button{
+ width: 230px;
+ }
