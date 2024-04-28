@@ -6,19 +6,14 @@ export const TrilhasContext = createContext()
 
 export const TrilhasContextProvider = ({children}) =>{
 
-   const url = './trails.json'; // Substitua pela URL do seu arquivo JSON
-   const trilhas = useFetch(url);
+   const trilhas = useFetch('./trails.json');
 
-   // function getusers() {
-   //    fetch("http://localhost:3000/users")
-   //      .then((response) => response.json())
-   //      .then((data) => setUsers(data))
-   //      .catch((error) => console.log(error));
-   //  }
+   function addTrail(trailData) {
+trilhas.setData( (t) =>[ ...t,trailData])
+   }
 
-   // const [trilhas, setTrilhas] = useState("18")
-   return(
-<TrilhasContext.Provider value={{trilhas}}>
+ return(
+<TrilhasContext.Provider value={{trilhas,addTrail}}>
 {children}
 </TrilhasContext.Provider>
 

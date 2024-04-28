@@ -3,7 +3,9 @@ import styles from './index.module.css'
 import Button from '@mui/material/Button';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material/styles';
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { TrilhasContext } from '../../context/TrilhasContext';
 
 
 // Then, create your theme
@@ -25,9 +27,11 @@ const theme = createTheme({
 function CadastroTrilha() {
 
   const {register,handleSubmit} = useForm()
+ const {addTrail} = useContext(TrilhasContext)
 
   function sendForm(formValue){
     console.log(formValue)
+    addTrail(formValue)
   }
 
   return (
@@ -39,32 +43,32 @@ function CadastroTrilha() {
 <div className="groupLeft">
 
   <div className="input-wrapper">
-    <label htmlFor="name">Nome da trilha</label>
-    <input type="text" {...register("name",{
+    <label htmlFor="nome">Nome da trilha</label>
+    <input type="text" {...register("nome",{
       required: "Este campo é obrigatório",
       maxLength: {value:100,message:"Este campo aceita no máximo 100 caracteres"}
     })} />
   </div>
 
   <div className="input-wrapper">
-    <label htmlFor="estimated-duration">Duração estimada (min)</label>
-    <input type="number" {...register("estimated-duration",{
+    <label htmlFor="duracao">Duração estimada (min)</label>
+    <input type="number" {...register("duracao",{
       required: "Este campo é obrigatório",
 
     })}/>
   </div>
 
   <div className="input-wrapper">
-    <label htmlFor="route-size">Trajeto (km)</label>
-    <input type="number" {...register("route-size",{
+    <label htmlFor="trajeto">Trajeto (km)</label>
+    <input type="number" {...register("trajeto",{
       required: "Este campo é obrigatório",
     })}/>
   </div>
 
 
   <div className="input-wrapper">
-    <label htmlFor="city">Cidade</label>
-    <input type="text" {...register("city",{
+    <label htmlFor="cidadeEstado">Cidade/Estado</label>
+    <input type="text" {...register("cidadeEstado",{
       required: "Este campo é obrigatório",
       maxLength:{value:60,message:"Este campo aceita no máximo 60 caracteres"}
     })}/>
@@ -72,26 +76,34 @@ function CadastroTrilha() {
 </div>
 
 <div className="groupRight">
-  <div className="input-wrapper">
+  {/* <div className="input-wrapper">
     <label htmlFor="state">Estado</label>
     <input type="text" {...register("state",{
       required: "Este campo é obrigatório",
       maxLength: {value: 2,message:"Utilize a sigla do estado com apenas 02 caracteres."}
 
     })}/>
-  </div>
+  </div> */}
 
   <div className="input-wrapper">
-    <label htmlFor="username">Nome completo do usuário</label>
-    <input type="text" {...register("username",{
+    <label htmlFor="criador">Nome completo do usuário</label>
+    <input type="text" {...register("criador",{
       required: "Este campo é obrigatório",
       maxLength: {value:60,message:"Este campo aceita no máximo 60 caracteres"}
     })} />
   </div>
 
+  <div className="input-wrapper">
+    <label htmlFor="imagemUrl">URL da imagem da trilha</label>
+    <input type="text" {...register("imagemUrl",{
+      required: "Este campo é obrigatório",
+      maxLength: {value:300,message:"Este campo aceita no máximo 300 caracteres"}
+    })} />
+  </div>
+
     <div>
-      <label htmlFor="difficulty">Dificuldade</label>
-      <select {...register("difficulty",{
+      <label htmlFor="dificuldade">Dificuldade</label>
+      <select {...register("dificuldade",{
       required: "Este campo é obrigatório",
     })} >
       <option value="">Selecione uma Dificuldade</option>
@@ -102,8 +114,8 @@ function CadastroTrilha() {
     </div>
     
     <div>
-      <label htmlFor="type">Tipo de Trilha</label>
-      <select {...register("type",{
+      <label htmlFor="tipo">Tipo de Trilha</label>
+      <select {...register("tipo",{
       required: "Este campo é obrigatório",
     })} >
       <option value="">Selecione o tipo da trilha</option>
@@ -112,16 +124,12 @@ function CadastroTrilha() {
       </select>
     </div>
 
+
+
     </div>
 
-<div className="groupFarRight">
-  <div className="input-wrapper">
-    <label htmlFor="trail-image">URL da imagem da trilha</label>
-    <input type="text" {...register("trail-image",{
-      required: "Este campo é obrigatório",
-      maxLength: {value:300,message:"Este campo aceita no máximo 300 caracteres"}
-    })} />
-  </div>
+<div className={styles.buttonDiv}>
+
   <ThemeProvider theme={theme}>
     <Button type="submit" variant="contained" color="secondary">Cadastrar Trilha</Button>
     </ThemeProvider>

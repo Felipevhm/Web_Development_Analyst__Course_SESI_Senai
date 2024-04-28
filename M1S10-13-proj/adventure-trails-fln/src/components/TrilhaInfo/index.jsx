@@ -15,13 +15,13 @@ function TrilhaInfo() {
   // const url = '/trails.json'; // Substitua pela URL do seu arquivo JSON
   // const trilhas = useFetch(url);
 
-  if (!trilhas) {
+  if (!trilhas.data) {
     return <div>Carregando...</div>;
   }
 
   return (
     <div className='info-class'>
-      {trilhas.map((trilha, index) => (
+      {trilhas.data.map((trilha, index) => (
         <CardTrilha key={index} dadosTrilha={trilha} />
       ))}
     </div>

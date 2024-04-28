@@ -13,7 +13,7 @@ function useFetch(url) {
     fetchData();
   }, [url]);
 
-  return data;
+  return {data,setData};
 }
 
 export default useFetch;
