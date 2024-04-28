@@ -2,12 +2,18 @@ import React from 'react';
 import useFetch from '../../Hooks/useFetch';
 import CardTrilha from '../CardTrilha'
 
+
+import { TrilhasContext } from "./../../context/TrilhasContext"
+import { useContext } from "react"
+
+
 import './style.css'
 
-
 function TrilhaInfo() {
-  const url = '/trails.json'; // Substitua pela URL do seu arquivo JSON
-  const trilhas = useFetch(url);
+  const {trilhas} = useContext(TrilhasContext)
+
+  // const url = '/trails.json'; // Substitua pela URL do seu arquivo JSON
+  // const trilhas = useFetch(url);
 
   if (!trilhas) {
     return <div>Carregando...</div>;
