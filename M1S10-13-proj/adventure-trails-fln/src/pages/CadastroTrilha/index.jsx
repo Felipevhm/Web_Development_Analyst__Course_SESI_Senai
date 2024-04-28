@@ -1,19 +1,35 @@
+import styles from './index.module.css'
+
+import Button from '@mui/material/Button';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+
+
+// Then, create your theme
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#324243', // Your primary color
+    },
+    secondary: {
+      main: '#5A300E', // Your secondary color
+    },
+    // You can also define other colors here
+  },
+});
+
+// Now, you can use the ThemeProvider component to apply your theme
+
 
 function CadastroTrilha() {
-  // : campo de texto;
-  // : campo numérico;
-  // : campo numérico;
-  // Cidade: campo de texto;
-  // Estado: campo de texto;
-  // Nome completo usuário: campo de texto;
-  // Dificuldade: campo de select.
-  // Tipo de trilha: campo de select;
-  // URL imagem da trilha: campo de texto;
+
   return (
-   <div style={{background: '#5A4F39', height: '100vh'}}>
+   <div className={styles.page} >
    <h1>Cadastro de nova trilha</h1>
 
-<form>
+<form className={styles.form}>
+
+<div className="groupLeft">
 
   <div className="input-wrapper">
     <label htmlFor="name">Nome da trilha</label>
@@ -21,7 +37,7 @@ function CadastroTrilha() {
   </div>
 
   <div className="input-wrapper">
-    <label htmlFor="estimated-duration">Duração estimada</label>
+    <label htmlFor="estimated-duration">Duração estimada (h)</label>
     <input type="number" name="estimated-duration"/>
   </div>
 
@@ -35,7 +51,9 @@ function CadastroTrilha() {
     <label htmlFor="city">Cidade</label>
     <input type="text" name="city"/>
   </div>
+</div>
 
+<div className="groupRight">
   <div className="input-wrapper">
     <label htmlFor="state">Estado</label>
     <input type="text" name="state"/>
@@ -63,14 +81,17 @@ function CadastroTrilha() {
       </select>
     </div>
 
+    </div>
 
-
-
+<div className="groupFarRight">
   <div className="input-wrapper">
     <label htmlFor="trail-image">URL da imagem da trilha</label>
     <input type="text" name="trail-image"/>
   </div>
-  
+  <ThemeProvider theme={theme}>
+    <Button variant="contained" color="secondary">Cadastrar Trilha</Button>
+    </ThemeProvider>
+</div>
 
 </form>
 </div>

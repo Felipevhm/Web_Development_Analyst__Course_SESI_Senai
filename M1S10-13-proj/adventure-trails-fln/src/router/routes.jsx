@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Home from "./../pages/Home"
-import CadastroTrilha from "./../pages/CadastroTrilha.jsx"
+import CadastroTrilha from "./../pages/CadastroTrilha"
 import ListaTrilhas from "./../pages/ListaTrilhas"
 import App from "../App.jsx";
 
