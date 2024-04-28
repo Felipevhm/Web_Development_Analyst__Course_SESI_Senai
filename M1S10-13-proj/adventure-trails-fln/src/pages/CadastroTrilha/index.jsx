@@ -26,7 +26,7 @@ const theme = createTheme({
 
 function CadastroTrilha() {
 
-  const {register,handleSubmit} = useForm()
+  const {register,handleSubmit,formState:{errors}} = useForm()
  const {addTrail} = useContext(TrilhasContext)
 
   function sendForm(formValue){
@@ -48,6 +48,7 @@ function CadastroTrilha() {
       required: "Este campo é obrigatório",
       maxLength: {value:100,message:"Este campo aceita no máximo 100 caracteres"}
     })} />
+    {errors?.nome && <p style={{fontSize:"16px", color:"gold"}}>{errors.nome?.message} </p>}
   </div>
 
   <div className="input-wrapper">
@@ -56,6 +57,7 @@ function CadastroTrilha() {
       required: "Este campo é obrigatório",
 
     })}/>
+        {errors?.duracao && <p style={{fontSize:"16px", color:"gold"}}>{errors.duracao?.message} </p>}
   </div>
 
   <div className="input-wrapper">
@@ -63,6 +65,7 @@ function CadastroTrilha() {
     <input type="number" {...register("trajeto",{
       required: "Este campo é obrigatório",
     })}/>
+    {errors?.trajeto && <p style={{fontSize:"16px", color:"gold"}}>{errors.trajeto?.message} </p>}
   </div>
 
 
@@ -72,25 +75,20 @@ function CadastroTrilha() {
       required: "Este campo é obrigatório",
       maxLength:{value:60,message:"Este campo aceita no máximo 60 caracteres"}
     })}/>
+    {errors?.cidadeEstado && <p style={{fontSize:"16px", color:"gold"}}>{errors.cidadeEstado?.message} </p>}
+
   </div>
 </div>
 
 <div className="groupRight">
-  {/* <div className="input-wrapper">
-    <label htmlFor="state">Estado</label>
-    <input type="text" {...register("state",{
-      required: "Este campo é obrigatório",
-      maxLength: {value: 2,message:"Utilize a sigla do estado com apenas 02 caracteres."}
-
-    })}/>
-  </div> */}
-
   <div className="input-wrapper">
     <label htmlFor="criador">Nome completo do usuário</label>
     <input type="text" {...register("criador",{
       required: "Este campo é obrigatório",
       maxLength: {value:60,message:"Este campo aceita no máximo 60 caracteres"}
     })} />
+    {errors?.criador && <p style={{fontSize:"16px", color:"gold"}}>{errors.criador?.message} </p>}
+
   </div>
 
   <div className="input-wrapper">
@@ -99,29 +97,35 @@ function CadastroTrilha() {
       required: "Este campo é obrigatório",
       maxLength: {value:300,message:"Este campo aceita no máximo 300 caracteres"}
     })} />
+    {errors?.imagemUrl && <p style={{fontSize:"16px", color:"gold"}}>{errors.imagemUrl?.message} </p>}
+
   </div>
 
     <div>
       <label htmlFor="dificuldade">Dificuldade</label>
       <select {...register("dificuldade",{
       required: "Este campo é obrigatório",
-    })} >
+     })} >
       <option value="">Selecione uma Dificuldade</option>
       <option value="Iniciante">Iniciante</option>
       <option value="Intermediário">Intermediário</option>
       <option value="Avançado">Avançado</option>
       </select>
+    {errors?.dificuldade && <p style={{fontSize:"16px", color:"gold"}}>{errors.dificuldade?.message} </p>}
+      
     </div>
     
     <div>
       <label htmlFor="tipo">Tipo de Trilha</label>
       <select {...register("tipo",{
       required: "Este campo é obrigatório",
-    })} >
+     })} >
       <option value="">Selecione o tipo da trilha</option>
       <option value="caminhada">Caminhada</option>
       <option value="trekking">Trekking</option>
       </select>
+    {errors?.tipo && <p style={{fontSize:"16px", color:"gold"}}>{errors.tipo?.message} </p>}
+
     </div>
 
 
