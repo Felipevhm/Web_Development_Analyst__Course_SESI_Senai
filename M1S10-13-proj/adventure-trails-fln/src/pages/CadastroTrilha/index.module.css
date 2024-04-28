@@ -1,6 +1,7 @@
 
 form {
   display: flex;
+  flex-wrap: wrap;
   gap: 8rem;
 
   justify-content: center;
