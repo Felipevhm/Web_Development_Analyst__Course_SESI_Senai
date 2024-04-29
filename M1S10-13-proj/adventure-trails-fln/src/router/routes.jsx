@@ -1,28 +1,22 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Home from "./../pages/Home"
-import CadastroTrilha from "./../pages/CadastroTrilha"
-import ListaTrilhas from "./../pages/ListaTrilhas"
+import Home from "./../pages/Home";
+import CadastroTrilha from "./../pages/CadastroTrilha";
+import ListaTrilhas from "./../pages/ListaTrilhas";
 import App from "../App.jsx";
 
-
 const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { path: "/", element: <Home /> },
 
-   { path:'/',
- element: <App/>,
- children: [
+      { path: "/cadastro-trilha", element: <CadastroTrilha /> },
 
-   {path: "/",
-   element:<Home/>},
+      { path: "/lista-trilha", element: <ListaTrilhas /> },
+    ],
+  },
+]);
 
-   {path:"/cadastro-trilha",
-      element:<CadastroTrilha/>},
-
-   {path:"/lista-trilha",
-         element:<ListaTrilhas/>},
-
-  ]  } 
-
-])
-
-export default routes
+export default routes;
