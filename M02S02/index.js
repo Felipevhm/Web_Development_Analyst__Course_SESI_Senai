@@ -1,6 +1,6 @@
-const filtrarPares = require("./filtrarPares.js");
+// const filtrarPares = require("./filtrarPares.js");
 
-const numero = 4
-const outDobro = filtrarPares(numero);
+// const numeros = [1,2,3,4]
+// const pares = filtrarPares(numeros);
 
-console.log(outDobro)
+// console.log(outDobro)
