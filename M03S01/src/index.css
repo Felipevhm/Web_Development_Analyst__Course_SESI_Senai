@@ -1,21 +1,54 @@
-* {
-  margin: 0;
-  padding: 0%;
-  box-sizing: border-box;
+:root {
+  --tea-green: #c6ebbe;
+  --celadon: #a9dbb8;
+  --air-superiority-blue: #7ca5b8;
+  --egyptian-blue: #38369a;
+  --phthalo-blue: #020887;
 }
 
-#root,
-html,
+/* Estilos Globais */
 body {
-  width: 100%;
-  height: 100%;
+  font-family: "Arial", sans-serif;
+  background-color: var(--phthalo-blue);
+  color: var(--tea-green);
+  margin: 0;
+  padding: 0;
 }
 
-#container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+h1,
+span {
+  color: var(--air-superiority-blue);
+}
+
+h2 {
+  color: #fff;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--egyptian-blue);
+}
+
+button {
+  background-color: var(--air-superiority-blue);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--egyptian-blue);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

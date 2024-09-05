@@ -1,22 +1,33 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
-import CountdownTimer from "../components/CountdownTimer"; // Importa o componente de temporizador
+import CountdownTimer from "../components/CountdownTimer";
 
 const Home = () => {
   const { user, logout } = useContext(AuthContext);
 
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div
+      className="container home-div"
+      style={{
+        maxWidth: "600px",
+        margin: "auto",
+        marginTop: "50px",
+        padding: "20px",
+      }}
+    >
+      <h1 style={{ textAlign: "center", color: "var(--tea-green)" }}>
+        Bem-vindo
+      </h1>
       {user ? (
         <div>
-          <p>Bem-vindo, {user.name}!</p>
-          <button onClick={logout}>Sair</button>
-          {/* Adiciona o componente de temporizador com um valor inicial de 5 minutos */}
-          <CountdownTimer initialMinutes={1} />
+          <p style={{ color: "var(--celadon)" }}>Olá, {user.name}!</p>
+          <button onClick={logout} style={{ marginBottom: "20px" }}>
+            Sair
+          </button>
+          <CountdownTimer initialMinutes={5} />
         </div>
       ) : (
-        <p>Você não está logado.</p>
+        <p style={{ color: "var(--celadon)" }}>Você não está logado.</p>
       )}
     </div>
   );

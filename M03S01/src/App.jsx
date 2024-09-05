@@ -7,10 +7,14 @@ const App = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/login">
+              <span>Login</span>
+            </Link>
           </li>
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/home">
+              <span>Home</span>
+            </Link>
           </li>
         </ul>
       </nav>
