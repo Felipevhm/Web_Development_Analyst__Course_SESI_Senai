@@ -1,3 +1,5 @@
+// WARNING - needs some improvements to keep previous login logic and only change styles
+
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
