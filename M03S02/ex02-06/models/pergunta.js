@@ -4,7 +4,10 @@ module.exports = (sequelize, DataTypes) => {
        type: DataTypes.STRING,
        allowNull: false,
      },
-   });
+     
+   }, {
+    tableName: 'Perguntas', // Especifica o nome da tabela no banco de dados
+  });
  
    Pergunta.associate = (models) => {
      Pergunta.belongsTo(models.Questionario, {

@@ -1,4 +1,4 @@
-const { Usuario, Permissao } = require('../models');
+const { Usuario, Permission } = require('../models');
 
 module.exports = {
   async listar(req, res) {
@@ -59,8 +59,8 @@ module.exports = {
   },
   async listarPermissoes(req, res) {
    try {
-     const permissoes = await Permissao.findAll({
-       include: [{ model: Usuario }],
+     const permissoes = await Permission.findAll({
+      //  include: [{ model: Usuario }],
      });
      return res.json(permissoes);
    } catch (error) {

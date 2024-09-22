@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.addColumn('Usuarios', 'permissao', {
+    await queryInterface.addColumn('Usuarios', 'permission', {
       type: Sequelize.STRING,
       allowNull: false,
       defaultValue: 'estudante'  // Valor padrão
@@ -10,6 +10,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.removeColumn('Usuarios', 'permissao');
+    await queryInterface.removeColumn('Usuarios', 'permission');
   }
 };

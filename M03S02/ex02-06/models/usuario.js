@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
    Usuario.associate = models => {
      Usuario.hasMany(models.Questionario, { foreignKey: 'usuario_id' });
      Usuario.hasMany(models.Resposta, { foreignKey: 'usuario_id' });
-     Usuario.belongsToMany(models.Permissao, {
+     Usuario.belongsToMany(models.Permission, {
        through: 'usuario_permissao',
        foreignKey: 'usuario_id',
      });

@@ -1,18 +1,18 @@
 module.exports = (sequelize, DataTypes) => {
-   const Permissao = sequelize.define('Permissao', {
+   const Permission = sequelize.define('Permission', {
      nome: {
        type: DataTypes.STRING,
        allowNull: false,
      },
    });
  
-   Permissao.associate = models => {
-     Permissao.belongsToMany(models.Usuario, {
+   Permission.associate = models => {
+     Permission.belongsToMany(models.Usuario, {
        through: 'usuario_permissao',
        foreignKey: 'permissao_id',
      });
    };
  
-   return Permissao;
+   return Permission;
  };
  
